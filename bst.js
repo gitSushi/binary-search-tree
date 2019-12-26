@@ -3,6 +3,10 @@ class BST{
         this.root = null
     }
 
+    insertRecurse(val){
+        
+    }
+
     add(value){
         const node = this.root
         const newNode = new Node(value)
