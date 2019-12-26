@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Binary Search Tree</title>
+    </head>
+    <body>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <script src="./node.js"></script>
+        <script src="./bst.js"></script>
+        
+        <script>
+        
+            const myTree = new BST()
+            
+            const arr = [9,12,5,3,1]
+            //const arr = [9,5,13,6,12,8,7,17,20,3,4,2]
+           
+            arr.forEach(element => {
+                myTree.add(element)
+            });
+            
+            document.getElementById('demo').innerHTML = myTree.preOrder()
+
+            //myTree.remove(4)
+            //myTree.add(23)
+            //myTree.rotateLeft(myTree.root.left)
+            //myTree.rotateRight(myTree.root)
+            myTree.add(4)
+
+            document.getElementById('demo1').innerHTML = myTree.preOrder()
+
+            console.log(myTree)
+
+            console.log('min', myTree.findMinHeight())
+            console.log('max', myTree.findMaxHeight())
+
+            console.log('minHeight', myTree.minHeight())
+            console.log('maxHeight', myTree.maxHeight())
+
+        </script>
+
+    </body>
+</html>
